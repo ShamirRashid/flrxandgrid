@@ -4,55 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS BUILDING With Row & AND COloumn</title>
+    <title>grid-gap</title>
     <style>
-        .container {
-            background: none;
-            width: 700px;
-            margin: 70px 0 0 50px;
-            display: grid;
-            grid-template-columns: 250px 250px 250px ;         
-            grid-gap: 22px;
-            grid-template-columns: repeat(3,200px);
-            grid-template-rows:repeat(50fr,200px) ;
-            grid-template-rows: 150px 150px 150px 200px;
-
-        }
-
-
         .item1 {
             background: cornflowerblue;
         }
 
         .item2 {
             background: orangered;
+            grid-row-start: 2;
         }
 
         .item3 {
             background: yellow;
+            /* grid-area: auto; */
         }
 
         .item4 {
             background: red;
+            grid-row-end: 2;
         }
 
         .item5 {
             background: forestgreen;
-        }
+                }
+
 
         .item6 {
             background: blue;
         }
 
-        /*        
-    .item7{
-    background:palevioletred ;
-     } */
+        .container {
+            background: none;
+            width: 700px;
+            margin: 70px 0 0 50px;
+            display: grid;
+            /* grid-template-columns: 100px 190px 100px 100px;
+            grid-template-rows: 100px 100px 100px 150px;
+            grid-template-columns: repeat(2, 290px);
+            grid-row-gap: 20px;
+            grid-column-gap: 10px;
+
+         grid-column-start:3 ;
+         grid-column-end: 1; */
+grid-column: 2 / 3;
+grid-area: 2 / 3 / 2 / 2 / 3;
+grid-row:3 / 3;
+        }
     </style>
 </head>
 
+
+
 <body>
-    <h1>Shamir rashid: CSS</h1>
+    <h1>
+        SHAMIR RASHID.CSS
+    </h1>
     <div class="container">
         <div class="item1">First </div>
         <div class="item2">Second</div>
@@ -60,10 +67,8 @@
         <div class="item4">Fourth</div>
         <div class="item5">fivth</div>
         <div class="item6">Six</div>
-        <div class="item6">seven</div>
-        <!-- <div class="item1">seven</div>
-<div class="item1">eight</div> -->
     </div>
+
 </body>
 
 </html>
