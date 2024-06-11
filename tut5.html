@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID GRID</title>
+    <style>
+        .container {
+            background: #eee;
+            width: 750px;
+            margin: 45px auto 0;
+
+            display: grid;
+            grid-template-columns: repeat(3 [col-stat] , 1fr  [col-end] );
+            grid-template-rows: 120px 60px 100px 400px;
+            grid-gap: 15px;
+            grid-template-rows: [header-start] 120px [header-end meanu-start] 60px [meanu-end box-start]100px[box-end content-start] 400px  [content-end footer-start] 50px [footer-end]  ;
+        }
+
+        .header {
+            background: orange;
+            grid-row: header-start / header-end;
+            grid-column: col-start  1 / col-end 3;
+
+        }
+
+        .meanu {
+            background: hotpink;
+            border: 1px solid red;
+            grid-row: mean-start / meanu-end;
+            grid-column: col-start  1 / col-end 3;
+        }
+
+        .box1 {
+            background: royalblue;
+
+        }
+
+        .box2 {
+            background: rgb(211, 0, 106);
+        }
+        .Sidebar{
+            background: rgb(102, 15, 216);
+            grid-row: box-start / content-end;
+        }
+        .content {
+            background: rgb(211, 67, 0);
+            grid-row: cotent-start /content-end;
+            grid-column: col-start  1 / col-end 2;
+        }
+        .footer {
+            background: rgb(116, 248, 8);
+            grid-row: footer-srart / footer-end ;
+            grid-column: 1 / -1;
+        }
+        .box2 {
+            background: rgb(255, 3, 3);
+        }
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <h1>CODDING WITH SHAMIR</h1>
+    <div class="container">
+        <div class="items header"> Header</div>
+        <div class="items meanu"> MEAN</div>
+        <div class="items box1"> Box1</div>
+        <div class="items box2"> Box2</div>
+        <div class="items Sidebar"> Sidebar</div>
+        <div class="items content"> Content</div>
+        <div class="items footer"> Footer</div>
+    </div>
+</body>
+
+</html>
